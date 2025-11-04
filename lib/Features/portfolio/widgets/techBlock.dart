@@ -16,7 +16,7 @@ class TechBlock extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         mainAxisSpacing: 16,
         crossAxisSpacing: 16,
-        childAspectRatio: 16/9,
+        childAspectRatio: 16/5,
         children: const [
           _TechCard(
             title: 'Rider App / Web',

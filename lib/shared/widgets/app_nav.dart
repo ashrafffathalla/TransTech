@@ -18,6 +18,6 @@ class DrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(title: Text(label,style: TextStyle(color: Colors.white),), onTap: onTap);
+    return ListTile(title: Text(label,style: TextStyle(color: Colors.black),), onTap: onTap);
   }
 }

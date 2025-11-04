@@ -66,7 +66,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TransTech'),
+        title: Image.asset('assets/logo.png',height: MediaQuery.of(context).size.height*0.12,),
         toolbarHeight: width < 480 ? 56 : 64,
         actions: isWide
             ? [

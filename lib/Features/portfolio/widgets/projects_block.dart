@@ -24,6 +24,7 @@ class ProjectsBlock extends StatelessWidget {
           crossAxisCount: cols,
           mainAxisSpacing: 16,
           crossAxisSpacing: 16,
+          childAspectRatio: w >= 1200 ? 16/5 : 16/8,
 
         ),
         itemBuilder: (context, i) {
