@@ -37,6 +37,7 @@ dependencies:
   url_launcher: ^6.3.0
   google_fonts: ^6.2.1
   font_awesome_flutter: ^10.7.0
+  flutter_launcher_icons: ^0.14.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -55,7 +56,15 @@ dev_dependencies:
 # pubspec.yaml
 flutter:
   assets:
-    - assets/logo.png
+    - assets/
+flutter_launcher_icons:
+  image_path: "assets/logo.png"
+  web:
+    generate: true
+    image_path: "assets/logo.png"
+    background_color: "#FFFFFF"
+    theme_color: "#1FB57A"
+
     # - assets/logo_dark.png   # (optional)
 
 

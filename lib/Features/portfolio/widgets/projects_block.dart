@@ -10,12 +10,6 @@ class ProjectsBlock extends StatelessWidget {
       final w = c.maxWidth;
       final cols = w >= 1200 ? 4 : w >= 900 ? 3 : w >= 600 ? 2 : 1;
 
-      //  Taller tiles to avoid overflow with Arabic/long text & badges
-      final itemHeight =
-      w >= 1200 ? 340 :
-      w >= 900  ? 360 :
-      w >= 600  ? 380 : 420;
-
       return GridView.builder(
         itemCount: _items.length,
         shrinkWrap: true,
@@ -24,8 +18,7 @@ class ProjectsBlock extends StatelessWidget {
           crossAxisCount: cols,
           mainAxisSpacing: 16,
           crossAxisSpacing: 16,
-          childAspectRatio: w >= 1200 ? 16/5 : 16/8,
-
+          childAspectRatio: w >= 1200 ?3 / 3 : 5 / 5,
         ),
         itemBuilder: (context, i) {
           final p = _items[i];
@@ -55,79 +48,74 @@ class _ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final shownBadges = badges.take(3).toList(); // // cap badges to 3
+    final shownBadges = badges.take(3).toList();
 
     return Card(
-      elevation: 2,
+
       clipBehavior: Clip.antiAlias,
+      elevation: 2,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Brand accent
-            Container(height: 6, decoration: const BoxDecoration(gradient: TTColors.gradientOrange)),
-            const SizedBox(height: 10),
-
-            // Title
-            Text(
-              title,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context)
-                  .textTheme
-                  .titleMedium
-                  ?.copyWith(fontWeight: FontWeight.w800, color: TTColors.blue),
-            ),
-            const SizedBox(height: 6),
-
-            //  Clamp description
-            Text(
-              description,
-              maxLines: 3,
-              overflow: TextOverflow.ellipsis,
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-
-            if (shownBadges.isNotEmpty) ...[
+        padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min, 
+            children: [
+              Container(
+                height: 6,
+                decoration: const BoxDecoration(gradient: TTColors.gradientOrange),
+              ),
               const SizedBox(height: 10),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: shownBadges.map((b) => Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFFFF2E6),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: TTColors.orange.withOpacity(.35)),
+              Text(
+                title,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium
+                    ?.copyWith(fontWeight: FontWeight.w800, color: TTColors.blue),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                description,
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              if (shownBadges.isNotEmpty) ...[
+                const SizedBox(height: 10),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: shownBadges.map((b) {
+                    return Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFF2E6),
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: TTColors.orange.withOpacity(.35)),
+                      ),
+                      child: Text(b, style: Theme.of(context).textTheme.bodySmall),
+                    );
+                  }).toList(),
+                ),
+              ],
+              const SizedBox(height: 12),
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: TextButton(
+                  onPressed: onDetails ?? () {},
+                  style: TextButton.styleFrom(
+                    foregroundColor: TTColors.blue,
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
                   ),
-                  child: Text(b, style: Theme.of(context).textTheme.bodySmall),
-                )).toList(),
+                  child: const Text('View details'),
+                ),
               ),
             ],
-
-            const SizedBox(height: 12), //  replace Spacer with fixed gap
-
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: TextButton(
-                onPressed: onDetails ?? () {},
-                style: TextButton.styleFrom(
-                  foregroundColor: TTColors.blue,
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                ),
-                child: const Text('View details'),
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );
   }
 }
-
-/* ------------ Demo data ------------ */
 
 class _ProjectItem {
   final String title;

@@ -16,7 +16,7 @@ class ServicesBlock extends StatelessWidget {
         physics: const NeverScrollableScrollPhysics(),
         mainAxisSpacing: 16,
         crossAxisSpacing: 16,
-        childAspectRatio: w >= 1200 ? 16/5 : 16/5.5,
+        childAspectRatio: w >= 1200 ? 12/5 : 16/5.5,
         children: const [
           _ServiceTile('Daily Shuttle Routes', 'Fixed pick-ups & drop-offs aligned to shift times.'),
           _ServiceTile('On-Demand Trips', 'Ad-hoc rides for OT, late nights, and VIPs.'),

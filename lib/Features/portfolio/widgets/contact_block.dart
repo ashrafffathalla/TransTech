@@ -88,8 +88,8 @@ class ContactBlock extends StatelessWidget {
               children:  [
                 _PrimaryCTA(
                   icon: Icons.call,
-                  label: 'Call +20 123 456 7890',
-                  url: 'tel:+201234567890',
+                  label: 'Call +20 109 674 5251',
+                  url: 'tel:+201096745251',
                 ),
                 SizedBox(height: 10),
               _SecondaryCTA(
@@ -111,8 +111,8 @@ class ContactBlock extends StatelessWidget {
               children: [
                 const _PrimaryCTA(
                   icon: Icons.call,
-                  label: 'Call +20 123 456 7890',
-                  url: 'tel:+201234567890',
+                  label: 'Call +20 109 674 5251',
+                  url: 'tel:+201096745251',
                 ),
                 _SecondaryCTA(
                   icon:  FaIcon(FontAwesomeIcons.whatsapp, color: TTColors.orange, size: 18),

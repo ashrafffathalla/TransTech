@@ -124,7 +124,7 @@ class HeroBlock extends StatelessWidget {
                       SizedBox(width: 16),
                       _HeroStat(value: '85%', label: 'Late trips ↓'),
                       SizedBox(width: 16),
-                      _HeroStat(value: '50k+', label: 'Daily rides'),
+                      _HeroStat(value: '10k+', label: 'Daily rides'),
                     ],
                   ),
                 ),

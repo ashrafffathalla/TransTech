@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../shared/widgets/section.dart';
 import '../../../../shared/widgets/app_nav.dart';
+import '../../../theme/branding_colors.dart';
 import '../widgets/hero_block.dart';
 import '../widgets/about_block.dart';
 import '../widgets/services_block.dart';
@@ -59,18 +60,21 @@ class _PortfolioHomeState extends State<PortfolioHome> {
       NavButton('Home', () => _scrollTo(homeKey)),
       NavButton('About', () => _scrollTo(aboutKey)),
       NavButton('Services', () => _scrollTo(servicesKey)),
+      NavButton('Technology', () => _scrollTo(techKey)),
       NavButton('Fleet & Clients', () => _scrollTo(projectsKey)),
-      NavButton('Technology', () => _scrollTo(servicesKey)), // optional remap if you add a section key
       NavButton('Contact', () => _scrollTo(contactKey)),
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: Image.asset('assets/logo.png',height: MediaQuery.of(context).size.height*0.12,),
-        toolbarHeight: width < 480 ? 56 : 64,
+        title: Container(decoration: BoxDecoration( gradient: TTColors.gradientOrangeBlue,
+        ),
+
+            child: Image.asset('assets/logo.png',height: MediaQuery.of(context).size.height*0.12,)),
+
+        toolbarHeight: width < 480 ? 80 : 100,
         actions: isWide
-            ? [
-          ...navButtons,
+            ? [...navButtons,
           const SizedBox(width: 8),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),

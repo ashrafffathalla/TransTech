@@ -16,7 +16,7 @@ class AboutBlock extends StatelessWidget {
           'TransTech delivers reliable employee transportation for companies, factories, and business parks. '
               'We connect people to work safely and on time using technology-driven planning and operations.',
           bullets: [
-            'Coverage: Cairo, Giza, 6th of October, New Cairo, Obour',
+            'Coverage: 10th Of Ramadan,Cairo, Giza, 6th of October, New Cairo, Obour,Badr',
             '24/7 dispatch & on-ground supervisors',
             'Driver vetting, safety checks, incident logs',
           ],
