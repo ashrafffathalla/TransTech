@@ -27,7 +27,7 @@ class PortfolioApp extends StatelessWidget {
           colorScheme: scheme,
           scaffoldBackgroundColor: TTColors.bg,
           appBarTheme: const AppBarTheme(
-            backgroundColor: TTColors.blue,
+            backgroundColor:Colors.white70,
             foregroundColor: TTColors.onBlue,
             elevation: 0,
           ),

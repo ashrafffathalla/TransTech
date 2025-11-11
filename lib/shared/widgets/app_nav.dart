@@ -7,7 +7,7 @@ class NavButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(onPressed: onTap, child: Text(label,style: TextStyle(color: Colors.white)));
+    return TextButton(onPressed: onTap, child: Text(label,style: TextStyle(color: Colors.black)));
   }
 }
 

@@ -67,7 +67,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Container(decoration: BoxDecoration( gradient: TTColors.gradientOrangeBlue,
+        title: Container(decoration: BoxDecoration( color: Color(0xffF5F5F5)
         ),
 
             child: Image.asset('assets/logo.png',height: MediaQuery.of(context).size.height*0.12,)),
