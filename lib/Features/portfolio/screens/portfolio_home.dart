@@ -67,7 +67,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Container(decoration: BoxDecoration( color: Color(0xffF5F5F5)
+        title: Container(decoration: BoxDecoration(
         ),
 
             child: Image.asset('assets/logo.png',height: MediaQuery.of(context).size.height*0.12,)),
@@ -132,8 +132,11 @@ class _PortfolioHomeState extends State<PortfolioHome> {
               children: [
                 Section(key: homeKey, padding: contentPadding, child: HeroBlock(isWide: isWide)),
                 const Divider(height: 1),
-                Section(key: aboutKey, padding: contentPadding, child: const AboutBlock()),
+                Padding(padding: const EdgeInsets.symmetric(vertical:  40.0), child: Text("data",   style: Theme.of(context)
+                    .textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800, color: TTColors.blue)),),                Section(key: aboutKey, padding: contentPadding, child: const AboutBlock()),
                 const Divider(height: 1),
+                Padding(padding: const EdgeInsets.symmetric(vertical:  40.0), child: Text("data",   style: Theme.of(context)
+                    .textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800, color: TTColors.blue)),),
                 Section(key: servicesKey, padding: contentPadding, child: const ServicesBlock()),
                 const Divider(height: 1),
                 Section(

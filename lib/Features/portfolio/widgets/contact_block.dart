@@ -11,13 +11,16 @@ class ContactBlock extends StatelessWidget {
     final w = MediaQuery.sizeOf(context).width;
     final isPhone = w < 600;
 
-    return Card(
+    return
+      Card(
       elevation: 2,
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Column(
+
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+
           // Gradient header strip (subtle brand accent)
           Container(
             height: 6,

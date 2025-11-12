@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class TTColors {
   // Core brand
-  static const orange = Color(0xFFFF7A00);      // primary accent
-  static const orangeDeep = Color(0xFFE65F00);  // gradient end
-  static const blue = Color(0xFF0E4682);        // brand blue
+  static const orange = Color(0xFFFF7A00);
+  static const orangeDeep = Color(0xFFE65F00);
+  static const blue = Color(0xFF0E4682);
 
   // Neutrals
   static const bg = Color(0xFFF9FAFB);
