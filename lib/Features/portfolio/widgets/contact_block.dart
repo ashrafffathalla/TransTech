@@ -98,13 +98,13 @@ class ContactBlock extends StatelessWidget {
               _SecondaryCTA(
                 icon: const FaIcon(FontAwesomeIcons.whatsapp, color: TTColors.orange, size: 18),
                 label: 'WhatsApp',
-                url: 'https://wa.me/201234567890',
+                url: 'https://wa.me/201096745251',
               ),
                 SizedBox(height: 10),
                 _GhostCTA(
                   icon: Icons.email_outlined,
                   label: 'Email',
-                  url: 'mailto:contact@transtech.com',
+                  url: 'transtecheg@gmail.com',
                 ),
               ],
             )
@@ -125,7 +125,7 @@ class ContactBlock extends StatelessWidget {
                 const _GhostCTA(
                   icon: Icons.email_outlined,
                   label: 'Email',
-                  url: 'mailto:contact@transtech.com',
+                  url: 'transtecheg@gmail.com',
                 ),
               ],
             ),

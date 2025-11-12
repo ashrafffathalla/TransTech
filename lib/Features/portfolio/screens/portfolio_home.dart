@@ -67,11 +67,13 @@ class _PortfolioHomeState extends State<PortfolioHome> {
 
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: TTColors.orangeDeep, // هنا تختار اللون اللي تحبه
+          size: 28,
+        ),
         title: Container(decoration: BoxDecoration(
         ),
-
             child: Image.asset('assets/logo.png',height: MediaQuery.of(context).size.height*0.12,)),
-
         toolbarHeight: width < 480 ? 80 : 100,
         actions: isWide
             ? [...navButtons,
@@ -89,6 +91,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
       drawer: isWide
           ? null
           : Drawer(
+        backgroundColor: TTColors.onOrange,
         child: SafeArea(
           child: ListView(
             padding: const EdgeInsets.all(8),
@@ -130,23 +133,23 @@ class _PortfolioHomeState extends State<PortfolioHome> {
             controller: _scrollController,
             child: Column(
               children: [
+                SizedBox(height: 20,),
+                Text("Home",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
                 Section(key: homeKey, padding: contentPadding, child: HeroBlock(isWide: isWide)),
-                const Divider(height: 1),
-                Padding(padding: const EdgeInsets.symmetric(vertical:  40.0), child: Text("data",   style: Theme.of(context)
-                    .textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800, color: TTColors.blue)),),                Section(key: aboutKey, padding: contentPadding, child: const AboutBlock()),
-                const Divider(height: 1),
-                Padding(padding: const EdgeInsets.symmetric(vertical:  40.0), child: Text("data",   style: Theme.of(context)
-                    .textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800, color: TTColors.blue)),),
+                Text("About",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Divider(thickness: 4,color:Color(0xFFE65F00)),
+                Section(key: aboutKey, padding: contentPadding, child: const AboutBlock()),
+                Text("Services",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Divider(thickness: 4,color:Color(0xFFE65F00)),
                 Section(key: servicesKey, padding: contentPadding, child: const ServicesBlock()),
-                const Divider(height: 1),
-                Section(
-                  key: techKey,              // or remove this line if you don’t need nav to it
-                  padding: contentPadding,
-                  child: const TechBlock(),
-                ),
-                const Divider(height: 1),
+                Text("Technology",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Divider(thickness: 4,color:Color(0xFFE65F00)),
+                Section(key: techKey, padding: contentPadding, child: const TechBlock(),),
+                Text("Fleet & Clients",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Divider(thickness: 4,color:Color(0xFFE65F00)),
                 Section(key: projectsKey, padding: contentPadding, child: const ProjectsBlock()),
-                const Divider(height: 1),
+                Text("Contact Us",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Divider(thickness: 4,color:Color(0xFFE65F00)),
                 Section(key: contactKey, padding: contentPadding, child: const ContactBlock()),
                 const SizedBox(height: 48),
                 const PortfolioFooter(),
