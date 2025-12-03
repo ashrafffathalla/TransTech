@@ -68,7 +68,7 @@ class _PortfolioHomeState extends State<PortfolioHome> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
-          color: TTColors.orangeDeep, // هنا تختار اللون اللي تحبه
+          color: TTColors.orangeDeep,
           size: 28,
         ),
         title: Container(decoration: BoxDecoration(
@@ -133,22 +133,22 @@ class _PortfolioHomeState extends State<PortfolioHome> {
             controller: _scrollController,
             child: Column(
               children: [
-                SizedBox(height: 20,),
-                Text("Home",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                SizedBox(height:35,),
+                Padding(padding: const EdgeInsets.only(left:35,top: 12), child: Row(children: [Text("Home",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),],),),
                 Section(key: homeKey, padding: contentPadding, child: HeroBlock(isWide: isWide)),
-                Text("About",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Padding(padding: const EdgeInsets.only(left:35,top: 12), child: Row(children: [Text("About",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),],),),
                 Divider(thickness: 4,color:Color(0xFFE65F00)),
                 Section(key: aboutKey, padding: contentPadding, child: const AboutBlock()),
-                Text("Services",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Padding(padding: const EdgeInsets.only(left:35,top: 12), child: Row(children: [Text("Services",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),],),),
                 Divider(thickness: 4,color:Color(0xFFE65F00)),
                 Section(key: servicesKey, padding: contentPadding, child: const ServicesBlock()),
-                Text("Technology",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Padding(padding: const EdgeInsets.only(left:35,top: 12), child: Row(children: [Text("Technology",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),],),),
                 Divider(thickness: 4,color:Color(0xFFE65F00)),
                 Section(key: techKey, padding: contentPadding, child: const TechBlock(),),
-                Text("Fleet & Clients",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Padding(padding: const EdgeInsets.only(left:35,top: 12), child: Row(children: [Text("Fleet & Clients",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),],)),
                 Divider(thickness: 4,color:Color(0xFFE65F00)),
                 Section(key: projectsKey, padding: contentPadding, child: const ProjectsBlock()),
-                Text("Contact Us",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),
+                Padding(padding: const EdgeInsets.only(left:35,top: 12),child: Row(children: [Text("Contact Us",   style:TextStyle(fontWeight: FontWeight.w800, color: TTColors.blue,fontSize: 30) ),],),),
                 Divider(thickness: 4,color:Color(0xFFE65F00)),
                 Section(key: contactKey, padding: contentPadding, child: const ContactBlock()),
                 const SizedBox(height: 48),

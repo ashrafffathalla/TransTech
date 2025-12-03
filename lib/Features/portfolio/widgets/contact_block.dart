@@ -67,7 +67,7 @@ class ContactBlock extends StatelessWidget {
 
           // Quick “badges” / selling points
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal:35, vertical: 8),
             child: Wrap(
               spacing: 8,
               runSpacing: 8,
@@ -80,7 +80,7 @@ class ContactBlock extends StatelessWidget {
             ),
           ),
 
-          const Divider(height: 20),
+          const Divider(height:35),
 
           // CTAs
           Padding(
@@ -104,7 +104,7 @@ class ContactBlock extends StatelessWidget {
                 _GhostCTA(
                   icon: Icons.email_outlined,
                   label: 'Email',
-                  url: 'transtecheg@gmail.com',
+                  url: 'mailto:transtecheg@gmail.com',
                 ),
               ],
             )
@@ -125,8 +125,8 @@ class ContactBlock extends StatelessWidget {
                 const _GhostCTA(
                   icon: Icons.email_outlined,
                   label: 'Email',
-                  url: 'transtecheg@gmail.com',
-                ),
+                  url: 'mailto:transtecheg@gmail.com',
+                ), 
               ],
             ),
           ),
@@ -179,7 +179,7 @@ class _PrimaryCTA extends StatelessWidget {
   }
 }
 class _SecondaryCTA extends StatelessWidget {
-  final Widget icon;       // ← Widget, not IconData
+  final Widget icon;
   final String label;
   final String url;
   const _SecondaryCTA({required this.icon, required this.label, required this.url});

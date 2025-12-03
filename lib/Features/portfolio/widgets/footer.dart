@@ -9,7 +9,7 @@ class PortfolioFooter extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
       alignment: Alignment.center,
       child: Text(
-        '© ${DateTime.now().year} TransTech • Technology-Powered Employee Transport • Cairo & Giza',
+        '© ${DateTime.now().year} Transportation Technology & Technology-Powered Employee Transport • 10th of Ramadan',
         style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.black87),
         textAlign: TextAlign.center,
       ),
